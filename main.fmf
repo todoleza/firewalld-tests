@@ -1,6 +1,6 @@
 component: firewalld
 contact: Tomas Dolezal <todoleza@redhat.com>
-test: make run
+test: ./runtest.sh
 duration: 5m
 relevancy: |
     distro < rhel-7: False
