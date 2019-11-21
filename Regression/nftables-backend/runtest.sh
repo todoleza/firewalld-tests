@@ -67,7 +67,7 @@ rlJournalStart
             # new version
             VER_0_7_UP=true
         fi
-        rlRun "rlImport firewalld/main" || rlDie
+        rlRun "rlImport firewalld-tests/main" || rlDie
         fwdSetup
         rlRun "fwdGetBackend | grep nftables" 0 "verify nftables backend"
     rlPhaseEnd

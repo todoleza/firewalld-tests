@@ -38,7 +38,7 @@ rlJournalStart
         rlAssertRpm $PACKAGE
         rlRun "TmpDir=\$(mktemp -d)" 0 "Creating tmp directory"
         rlRun "pushd $TmpDir"
-        rlRun "rlImport firewalld/main" || rlDie
+        rlRun "rlImport firewalld-tests/main" || rlDie
         fwdSetup
         rlIsRHEL 7 || { fwdSetBackend iptables; fwdRestart ; }
     rlPhaseEnd
